@@ -68,9 +68,10 @@
  }
 
 $.ajax({type: "GET",
-  url: "videos.json",
+  url: "https://api.myjson.com/bins/k4o2v",
   dataType: "json",
-  success: function(videos) {
+  success: function(response) {
+    var videos = response.videos
     for (var i = 0; i < videos.length; i++) {
       addVideoToList(videos[i]);
     }
