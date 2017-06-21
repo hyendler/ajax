@@ -33,7 +33,7 @@
         <h2>Asynchronous Technologies: AJAX/JSON</h2>
         <br>
           <p>
-            Slides: <a href="https://samparas.github.io/ajax/">https://samparas.github.io/ajax/</a>
+            Slides: <a href="https://hyendler.github.io/ajax/">https://hyendler.github.io/ajax/</a>
           </p>
         </section>
 
@@ -238,9 +238,10 @@ request.send();
       <section>
         <h2>Using jQuery for everything</h2>
 <pre><code>$.ajax({type: "GET",
-  url: "books.json",
+  url: "https://api.myjson.com/bins/wgonb",
   dataType: "json",
-  success: function(books) { 
+  success: function(response) { 
+    var books = response.books;
     for (var i = 0; i < books.length; i++) { 
       var book = books[i];
       var p = $('&lt;p&gt;');
@@ -253,6 +254,7 @@ request.send();
   }
 });
 </code></pre>
+<a href="http://jsbin.com/sozutuw/edit?html,output">JSBin</a>
       </section>
 
       <section>
